@@ -4,15 +4,13 @@ A simple tool to compare web pages between two sites. A common use case is to co
 ## Install
 
 ```bash
-# install locally (recommended)
-npm install dotenv --save
+# install required package
+npm i
 ```
-
-Or installing with yarn? `yarn add dotenv`
 
 ## Usage
 
-Create a `.env` file in the root of your project:
+Create a `.env` file in the root of this project:
 
 For example
 
@@ -31,7 +29,5 @@ The `.env` file contains the following arguments:
 * VIEW_PORT: The view port dimension.
 
 ## Run
-
-`npm i`
 
 `npm run start`
