@@ -1,7 +1,9 @@
+require('dotenv').config()
 const puppeteer = require('puppeteer');
 
 async function startBrowser(){
 	let browser;
+	const HEADLESS = process.env.HEADLESS === "true";
 	try {
 	    console.log("Opening the browser......");
 		const minimal_args = [
@@ -43,7 +45,7 @@ async function startBrowser(){
 		  ];
 		  
 		browser = await puppeteer.launch({
-			headless: false,
+			headless: HEADLESS,
 			args: minimal_args,
 			ignoreHTTPSErrors: true
 		  });
