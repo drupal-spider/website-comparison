@@ -1,0 +1,19 @@
+{
+  "name": "website_comparison",
+  "version": "1.0.0",
+  "description": "a website comparison tool",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "clean": "rm -rf ./screenshot",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mingsong Hu",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "jpeg-js": "^0.4.3",
+    "pixelmatch": "^5.2.1",
+    "puppeteer": "^13.5.1"
+  }
+}
