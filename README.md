@@ -19,6 +19,7 @@ WEBSITES = {"production": "https://www.google.com", "host": "www.google.com","st
 BASE_PATH = /,/search?keys=business,/contact-us
 MAX_SHOT = 30
 VIEW_PORT = { "width": "1440", "height": "600" }
+HEADLESS = true
 ```
 
 The `.env` file contains the following arguments:
@@ -27,6 +28,7 @@ The `.env` file contains the following arguments:
 * BASE_PATH: The base pathes of those site to check.
 * MAX_SHOT: The maximum number of screenshots will take or pages to check.
 * VIEW_PORT: The view port dimension.
+* HEADLESS: Whether to run browser in headless mode.
 
 ## Run
 
