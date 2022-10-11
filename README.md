@@ -1,5 +1,5 @@
 # website-comparison
-A simple tool to compare web pages between two sites. A common use case is to compre between production and stage site before deployment.
+A simple tool to compare web pages between two sites. A common use case is to compare between production and stage site before deployment.
 
 ## Install
 
