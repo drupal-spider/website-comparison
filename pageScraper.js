@@ -17,7 +17,6 @@ const scraperObject = {
 		viewPort.width = parseInt(viewPort.width)
 		viewPort.height = parseInt(viewPort.height)
 		const page = await browser.newPage();
-		const MEM_SIZE = parseInt(process.env.MEM_SIZE) ? parseInt(process.env.MEM_SIZE) : 512
 
 		// Set up the view port.
 		await page.setViewport(viewPort);
@@ -70,6 +69,7 @@ const scraperObject = {
 		return;
 	},
 	async takeScreenshots(baselineURL, path, urlObj, page) {
+		const MEM_SIZE = parseInt(process.env.MEM_SIZE) ? parseInt(process.env.MEM_SIZE) : 512
 		let candidateURL = urlObj.stage + path
 		let jpegData1, jpegData2
 		let img1,img2
@@ -109,7 +109,7 @@ const scraperObject = {
 				}
 			});
 			if (jpegData2) {				
-				img1 = JPEG.decode(jpegData1, {maxMemoryUsageInMB: MEM_SIZE})
+				img2 = JPEG.decode(jpegData2, {maxMemoryUsageInMB: MEM_SIZE})
 				const maxSize = img1.height * img1.width * 4
 				const diffBuffer = Buffer.alloc(maxSize)
 				const diff = { width: img1.width, height: img1.height, data: diffBuffer }
