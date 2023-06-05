@@ -20,6 +20,7 @@ BASE_PATH = /,/search?keys=business,/contact-us
 MAX_SHOT = 30
 VIEW_PORT = { "width": "1440", "height": "600" }
 HEADLESS = true
+MEM_SIZE = 1024
 ```
 
 The `.env` file contains the following arguments:
@@ -29,6 +30,7 @@ The `.env` file contains the following arguments:
 * MAX_SHOT: The maximum number of screenshots will take or pages to check.
 * VIEW_PORT: The view port dimension.
 * HEADLESS: Whether to run browser in headless mode.
+* MEM_SIZE: The (approximate) maximum memory that jpeg-js should allocate while attempting to decode.
 
 ## Run
 
