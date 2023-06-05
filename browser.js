@@ -3,7 +3,7 @@ const puppeteer = require('puppeteer');
 
 async function startBrowser(){
 	let browser;
-	const HEADLESS = process.env.HEADLESS === "true";
+	const HEADLESS = process.env.HEADLESS === "true" ? 'new' : false;
 	try {
 	    console.log("Opening the browser......");
 		const minimal_args = [
