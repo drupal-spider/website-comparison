@@ -85,7 +85,7 @@ const scraperObject = {
 				fullPage: true   // take a fullpage screenshot
 			});
 			if (jpegData1) {
-				img1 = JPEG.decode(jpegData1)
+				img1 = JPEG.decode(jpegData1, {maxMemoryUsageInMB: 1024})
 			}
 			else {
 				return
@@ -108,7 +108,7 @@ const scraperObject = {
 				}
 			});
 			if (jpegData2) {				
-				img2 = JPEG.decode(jpegData2)
+				img2 = JPEG.decode(jpegData2, {maxMemoryUsageInMB: 1024})
 				const maxSize = img1.height * img1.width * 4
 				const diffBuffer = Buffer.alloc(maxSize)
 				const diff = { width: img1.width, height: img1.height, data: diffBuffer }
